@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وب‌سایت آموزشی لجستیک</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3fc;
+            color: #333;
+            direction: rtl;
+        }
+
+        /* Header */
+        header {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #8e44ad;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+
+        nav ul li:hover > a {
+            background-color: #6c2f85;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #6c2f85;
+            min-width: 150px;
+            z-index: 100;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #512b5b;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .box {
+            background-color: #f1eaf5;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+        }
+
+        .content {
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #8e44ad;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ccc;
+        }
+    </style>
+    <script>
+        // JavaScript function to toggle menu display
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuItems = document.querySelectorAll("nav ul li");
+            menuItems.forEach(item => {
+                item.addEventListener("mouseenter", () => {
+                    const dropdown = item.querySelector("ul");
+                    if (dropdown) dropdown.style.display = "block";
+                });
+                item.addEventListener("mouseleave", () => {
+                    const dropdown = item.querySelector("ul");
+                    if (dropdown) dropdown.style.display = "none";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>وب‌سایت آموزشی لجستیک</h1>
+        <p>به اشتراک‌گذاری مقالات و پروژه‌های آموزشی برای دانشجویان</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">صفحه اول</a></li>
+            <li><a href="#about">درباره استاد</a>
+                <ul>
+                    <li><a href="#profile">پروفایل</a></li>
+                    <li><a href="#works">آثار و شبکه‌های اجتماعی</a></li>
+                </ul>
+            </li>
+            <li><a href="#resources">منابع و کتاب‌ها</a></li>
+            <li><a href="#updates">بروزرسانی‌ها</a></li>
+            <li><a href="#guidance">راهنمای کنکور</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="box">
+            <h2>صفحه اول</h2>
+            <div class="content">
+                <p>مطالب مهم و جدیدترین مقالات آموزشی برای دانشجویان به اشتراک گذاشته شده است.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="box">
+            <h2>درباره استاد دکتر صادق هادیان</h2>
+            <div class="content">
+                <p>استاد دکتر صادق هادیان، متخصص در زمینه لجستیک، فعالیت‌های پژوهشی و علمی گسترده‌ای دارند.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="box">
+            <h2>منابع و کتاب‌ها</h2>
+            <div class="content">
+                <p>کتاب‌های پیشنهادی و نرم‌افزارهای کاربردی در رشته لجستیک برای دانشجویان فراهم شده است.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="updates">
+        <div class="box">
+            <h2>بروزرسانی‌ها</h2>
+            <div class="content">
+                <p>مقالات و عناوین خارجی بروز شده در حوزه لجستیک در این بخش در دسترس است.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="guidance">
+        <div class="box">
+            <h2>راهنمای کنکور و مشاوره</h2>
+            <div class="content">
+                <p>راهنمایی‌ها، جزوات، و اطلاعات مربوط به آمادگی برای کنکور همراه با ساعت‌های تدریس و اطلاعیه‌های مهم در دسترس هستند.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>تماس با ما | شبکه‌های اجتماعی استاد دکتر صادق هادیان</p>
+        <div class="footer-links">
+            <a href="#">لینکدین</a> | <a href="#">توییتر</a> | <a href="#">تلگرام</a>
+        </div>
+    </footer>
+</body>
+</html>
